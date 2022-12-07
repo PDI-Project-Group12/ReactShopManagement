@@ -1,4 +1,5 @@
 import React from 'react'
+import GoogleFontLoader from 'react-google-font-loader'
 import 'adminbsb-materialdesign/plugins/bootstrap/css/bootstrap.css'
 import 'adminbsb-materialdesign/plugins/node-waves/waves.css'
 import 'adminbsb-materialdesign/plugins/animate-css/animate.css'
@@ -11,6 +12,26 @@ class Login extends React.Component{
         document.body.className="login-page"
 
         return(
+            <React.Fragment>
+            <GoogleFontLoader
+            fonts={[
+                {
+                font: 'Roboto',
+                weights: [400, '700'],
+                }
+
+            ]}
+            subsets={['latin','cyrillic-ext']}
+            />      
+            <GoogleFontLoader
+            fonts={[
+                {
+                font: 'Material+Icons',
+                }
+
+            ]}
+            />        
+
             <div class="login-box">
             <div class="logo">
                 <a href="javascript:void(0);">Admin<b>BSB</b></a>
@@ -57,6 +78,7 @@ class Login extends React.Component{
                 </div>
             </div>
         </div>
+        </React.Fragment>
         )
     }
     
