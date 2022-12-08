@@ -4,12 +4,14 @@ import 'adminbsb-materialdesign/plugins/bootstrap/css/bootstrap.css'
 import 'adminbsb-materialdesign/plugins/node-waves/waves.css'
 import 'adminbsb-materialdesign/plugins/animate-css/animate.css'
 import 'adminbsb-materialdesign/css/style.css'
+import AuthHandler from '../utils/AuthHandler'
 
 class Login extends React.Component{
     state={
         username:"",
         password:"",
         btnDisabled: true,
+        loginStatus:0,
     };
     saveInputs=(event)=> {
         var key=event.target.name;
@@ -26,7 +28,46 @@ class Login extends React.Component{
     formSubmit=(event)=> {
         event.preventDefault();
         console.log(this.state);
+        this.setState({loginStatus:1});
+        AuthHandler.login(this.state.username,this.state.password,this.handleAjaxResponse);
 
+    };
+
+
+    handleAjaxResponse=(data)=> {
+        console.log(data);
+        if(data.error){
+            this.setState({loginStatus:4});
+        }
+        else{
+            this.setState({loginStatus:3});
+        }
+    };
+    getMessage=()=>{
+        if(this.state.loginStatus===0){
+            return "";
+        }
+            else if(this.state.loginStatus===1){
+            return  (
+                <div class="alert alert-warning">
+                    <strong>Logging in!</strong> Please Wait.....
+                </div>
+            );
+        }
+        else if(this.state.loginStatus===3){
+            return  (
+                <div class="alert alert-success">
+                    <strong>Login Successful!</strong> 
+                </div>
+            );
+        }
+        else if(this.state.loginStatus===4){
+            return  (
+                <div class="alert alert-danger">
+                    <strong>Invalid Login Credentials</strong> 
+                </div>
+            );
+        }
     };
 
     render(){
@@ -98,6 +139,7 @@ class Login extends React.Component{
                                 <a href="forgot-password.html">Forgot Password?</a>
                             </div>
                         </div>
+                        {this.getMessage()}
                     </form>
                 </div>
             </div>
