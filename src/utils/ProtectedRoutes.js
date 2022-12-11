@@ -1,15 +1,15 @@
-import React, { Component } from 'react'
-import {Route, Navigate} from 'react-router-dom'
+import React, { children } from 'react'
+import {Outlet, Navigate} from 'react-router-dom'
 import AuthHandler from './AuthHandler'
 
-export var ProtectedRoutes=({component:Component, ...rest})=>{ 
+export var ProtectedRoutes=({children, ...rest})=>{ 
     console.log({...rest});
     console.log(rest);
     return ( 
-        <Route
+        <Outlet
         {...rest}
         render={(props)=> 
-            AuthHandler.loggedIn() ? <Component {...props}/> : <Navigate to="/" /> 
+            AuthHandler.loggedIn() ? <children {...props}/> : <Navigate to='/' /> 
         }
         />
     );
