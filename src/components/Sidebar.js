@@ -1,5 +1,6 @@
 import React from "react";
 import usericon from "adminbsb-materialdesign/images/user.png";
+import Config from "../utils/Config";
 
 class Sidebar extends React.Component{
     state={
@@ -60,7 +61,7 @@ class Sidebar extends React.Component{
                         >
                             keyboard_arrow_down</i>
                         <ul className="dropdown-menu pull-right">
-                            <li><a href="javascript:void(0);" className=" waves-effect waves-block"><i className="material-icons">input</i>Sign Out</a></li>
+                            <li><a href="#" className=" waves-effect waves-block"><i className="material-icons">input</i>Sign Out</a></li>
                         </ul>
                     </div>
                 </div>
@@ -72,24 +73,23 @@ class Sidebar extends React.Component{
                     style={{
                         position:"relative", 
                         overflow: "hidden", 
-                        width:"auto",
-                        height:"57px"}}>
+                        width:"auto"}}>
                     <ul className="list"
-                     style={{overflow:"hidden", width:"auto", height:"57px"}}>
-                    
-                    <li className="active">
-                        <a href="index.html" className="toggled waves-effect waves-block">
-                            <i className="material-icons">home</i>
-                            <span>Home</span>
+                     style={{overflow:"hidden", width:"auto"}}>
+
+                    {Config.sidebarItem.map(
+                        (item)=>
+                        <li 
+                        key={item.index}
+                        className={item.index==this.props.activepage ? "active":""}>
+                        <a href={item.url} className="toggled waves-effect waves-block">
+                            <i className="material-icons">{item.icons}</i>
+                            <span>{item.title}</span>
                         </a>
                     </li>
+                    )}
                     
-                    <li>
-                        <a href="javascript:void(0);" className=" waves-effect waves-block">
-                            <i className="material-icons col-light-blue">donut_large</i>
-                            <span>Information</span>
-                        </a>
-                    </li>
+                   
                 </ul>
                 <div className="slimScrollBar" 
                     style={{background: "rgba(0, 0, 0, 0.5)",width: "4px", position: "absolute", top: "0px", opacity: "0.4", display: "none", borderRadius: "0px", zIndex: "99", right: "1px", height: "30px"}}
@@ -103,7 +103,7 @@ class Sidebar extends React.Component{
   
             <div className="legal">
                 <div className="copyright">
-                    © 2022 - 2023 <a href="javascript:void(0);">Admin-ShopManagement</a>.
+                    © 2022 - 2023 <a href="#">Admin-ShopManagement</a>.
                 </div>
                 <div className="version">
                     <b>Version: </b> 3.0.0.3

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/Login';
 import {ProtectedRoutes}  from './utils/ProtectedRoutes';
 import MainComponent from './components/MainComponent';
+import MainComponentCopy from './components/MainComponentCopy';
 
 
 
@@ -11,9 +12,14 @@ import MainComponent from './components/MainComponent';
 ReactDOM.render(
     <Router>
        <Routes>
-            <Route path= "/" element= {<Login/>}></Route>
-            <Route element= {<ProtectedRoutes/>}></Route>
-            <Route path= "/home" element= {<MainComponent/>}></Route>
+            <Route exact path= '/'  element= {<Login/>}/>
+            <Route element= {<ProtectedRoutes/>}>
+               <Route exact path= '/home' activepage="0" element ={<MainComponent/>}/>
+            </Route>
+            <Route element= {<ProtectedRoutes/>}>
+               <Route exact path= '/company' activepage="1" element ={<MainComponentCopy/>}/>
+            </Route>
+            
            
 
        </Routes>

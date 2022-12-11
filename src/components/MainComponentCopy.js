@@ -2,16 +2,15 @@ import React from "react";
 import Overlay from './Overlay';
 import PageLoader from './PageLoader';
 import Navbar from './Navbar';
-import HomeComponent from '../pages/HomeComponent';
+import CompanyComponent from '../pages/CompanyComponent';
 import Sidebar from './Sidebar';
 import GoogleFontLoader from 'react-google-font-loader'
 import 'adminbsb-materialdesign/css/themes/all-themes.css';
 
-class MainComponent extends React.Component{
+class MainComponentCopy extends React.Component{
     state={
         bodyClass:"theme-red ls-closed",
         displayOverlay:"none",
-        width:window.screen.width,
     };
     onBarClick=()=>{
         if(this.state.bodyClass=="theme-red ls-closed overlay-open"){
@@ -28,22 +27,9 @@ class MainComponent extends React.Component{
 
     };
 
-    onscreenresize=()=>{
-        console.log(window.screen.width);
-        this.setState({width:window.screen.width})
-    }
-
-    componentWillMount(){
-        window.addEventListener("resize", this.onscreenresize)
-    }
-
-    componentWillUnmount(){
-        window.removeEventListener("resize", this.onscreenresize)
-    }
-
     render(){
 
-        if(this.state.width>1150){ 
+        if(window.screen.width>1150){ 
 
         document.getElementById("root").className="theme-red";
           }
@@ -71,11 +57,11 @@ class MainComponent extends React.Component{
             />      
             <Overlay display={this.state.displayOverlay}/>
             <Navbar onBarClick={this.onBarClick}/>
-            <Sidebar activepage={this.props.activepage}/>
-            <HomeComponent/>
+            <Sidebar/>
+            <CompanyComponent/>
             
         </React.Fragment>;
     }
 }
 
-export default MainComponent;
+export default MainComponentCopy;
