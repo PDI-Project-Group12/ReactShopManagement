@@ -7,6 +7,7 @@ import LogoutComponent from './pages/LogoutComponent'
 import MainComponent from './components/MainComponent';
 import MainComponentCopy from './components/MainComponentCopy';
 import { configure } from '@testing-library/react';
+import Config from './utils/Config';
 
 
 
@@ -15,7 +16,7 @@ ReactDOM.render(
     <Router>
        <Routes>
             <Route exact path= '/'  element= {<Login/>}/>
-            <Route exact path= {configure.logoutPageUrl}  element= {<LogoutComponent/>}/>
+            <Route exact path= {Config.logoutPageUrl}  element= {<LogoutComponent/>}/>
             <Route element= {<ProtectedRoutes/>}>
                <Route exact path= '/home' activepage="0" element ={<MainComponent/>}/>
             </Route>
