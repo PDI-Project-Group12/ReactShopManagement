@@ -1,6 +1,7 @@
 import React from "react";
 import usericon from "adminbsb-materialdesign/images/user.png";
 import Config from "../utils/Config";
+import { configure } from "@testing-library/react";
 
 class Sidebar extends React.Component{
     state={
@@ -61,7 +62,7 @@ class Sidebar extends React.Component{
                         >
                             keyboard_arrow_down</i>
                         <ul className="dropdown-menu pull-right">
-                            <li><a href="#" className=" waves-effect waves-block"><i className="material-icons">input</i>Sign Out</a></li>
+                            <li><a href={configure.logoutPageUrl} className=" waves-effect waves-block"><i className="material-icons">input</i>Sign Out</a></li>
                         </ul>
                     </div>
                 </div>
