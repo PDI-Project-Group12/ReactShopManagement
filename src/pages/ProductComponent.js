@@ -35,41 +35,66 @@ class ProductComponent extends React.Component{
                                     <div className="form-line">
                                         <input type="text" id="name" 
                                         name="name"
-                                        className="form-control" placeholder="Enter Company Name"/>
+                                        className="form-control" placeholder="Enter Product Name"/>
                                     </div>
                                 </div>
-                                <label htmlFor="email_address">License No.</label>
+                                <label htmlFor="email_address">product Type</label>
                                 <div className="form-group">
                                     <div className="form-line">
-                                        <input type="text" id="license_no" 
-                                        name="license_no"
-                                        className="form-control" placeholder="Enter License No."/>
+                                        <input type="text" id="product_type" 
+                                        name="product_type"
+                                        className="form-control" placeholder="Enter Product Type"/>
                                     </div>
                                 </div>
-                                <label htmlFor="email_address">Address</label>
+                                <label htmlFor="email_address">Buy Price</label>
                                 <div className="form-group">
                                     <div className="form-line">
-                                        <input type="text" id="address" 
-                                        name="address"
-                                        className="form-control" placeholder="Enter Company Address"/>
+                                        <input type="text" id="buy_price" 
+                                        name="buy_price"
+                                        className="form-control" placeholder="Enter Buy Price"/>
                                     </div>
                                 </div>
-                                <label htmlFor="email_address">Contact No.</label>
+                                <label htmlFor="email_address">Sell Price</label>
                                 <div className="form-group">
                                     <div className="form-line">
-                                        <input type="text" id="contact_no" 
-                                        name="contact_no"
-                                        className="form-control" placeholder="Enter Contact No."/>
+                                        <input type="text" id="sell_price" 
+                                        name="sell_price"
+                                        className="form-control" placeholder="Enter Sell Price"/>
                                     </div>
                                 </div>
-                                <label htmlFor="email_address">Email</label>
+                                <label htmlFor="email_address">Batch No.</label>
                                 <div className="form-group">
                                     <div className="form-line">
-                                        <input type="text" id="email" 
-                                        name="email"
-                                        className="form-control" placeholder="Enter Company Email"/>
+                                        <input type="text" id="batch_no" 
+                                        name="batch_no"
+                                        className="form-control" placeholder="Enter Batch No."/>
                                     </div>
                                 </div>
+                                <label htmlFor="email_address">Expiry Date</label>
+                                <div className="form-group">
+                                    <div className="form-line">
+                                        <input type="text" id="expiry_date" 
+                                        name="expiry_date"
+                                        className="form-control" placeholder="Expiry Date"/>
+                                    </div>
+                                </div>
+                                <label htmlFor="email_address">Expiry Date</label>
+                                <div className="form-group">
+                                    <div className="form-line">
+                                        <input type="text" id="expiry_date" 
+                                        name="expiry_date"
+                                        className="form-control" placeholder="Enter Expiry Date"/>
+                                    </div>
+                                </div>
+                                <label htmlFor="email_address">Mfg Date</label>
+                                <div className="form-group">
+                                    <div className="form-line">
+                                        <input type="text" id="mfg_date" 
+                                        name="mfg_date"
+                                        className="form-control" placeholder="Enter Mfg Date"/>
+                                    </div>
+                                </div>
+                                
                                 <label htmlFor="email_address">Description</label>
                                 <div className="form-group">
                                     <div className="form-line">

@@ -38,10 +38,10 @@ ReactDOM.render(
                <Route exact path= '/managecompanyaccount' activepage="4" element ={<MainComponentManageCompanyAccount/>}/>
             </Route>
             <Route element= {<ProtectedRoutes/>}>
-               <Route exact path= '/manageemploee' activepage="5" element ={<MainComponentManageEmployee/>}/>
+               <Route exact path= '/manageemployee' activepage="5" element ={<MainComponentManageEmployee/>}/>
             </Route>
             <Route element= {<ProtectedRoutes/>}>
-               <Route exact path= '/manageemploee' activepage="6" element ={<MainComponentGenerateBill/>}/>
+               <Route exact path= '/generatebill' activepage="6" element ={<MainComponentGenerateBill/>}/>
             </Route>
             
            
