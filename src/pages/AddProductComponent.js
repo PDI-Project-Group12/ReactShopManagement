@@ -2,7 +2,7 @@ import React from "react";
 import APIHandler from "../utils/APIHandler";
 import AuthHandler from "../utils/AuthHandler";
 
-class CompanyComponent extends React.Component{
+class AddProductComponent extends React.Component{
 
     async formSubmit(event){
         event.preventDefault();
@@ -17,14 +17,14 @@ class CompanyComponent extends React.Component{
             <section className="content">
                 <div className="container-fluid">
                     <div className="block-header">
-                        <h2>MANAGE COMPANY DATA</h2>
+                        <h2>ADD PRODUCT DETAILS</h2>
                     </div>
                     <div className="row clearfix">
                 <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div className="card">
                         <div className="header">
                             <h2>
-                                Add Company
+                                Add Product
                             </h2>
                             
                         </div>
@@ -81,7 +81,7 @@ class CompanyComponent extends React.Component{
                                 
                         
                                 <br/>
-                                <button type="submit" className="btn btn-primary m-t-15 waves-effect-btn-block">Add Company</button>
+                                <button type="submit" className="btn btn-primary m-t-15 waves-effect-btn-block">Add Product</button>
                             </form>
                         </div>
                     </div>
@@ -93,4 +93,4 @@ class CompanyComponent extends React.Component{
     }
 }
 
-export default CompanyComponent;
+export default AddProductComponent;
