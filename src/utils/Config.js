@@ -10,6 +10,9 @@ class Config{
         {"index":"2","title":"Product","url":"/product","icons":"assessment"},
         {"index":"3","title":"Product Details","url":"/productdetails","icons":"assessment"},
         {"index":"4","title":"Manage Company Account","url":"/managecompanyaccount","icons":"assessment"},
+        {"index":"5","title":"Manage Company Employee","url":"/manageemployee","icons":"assessment"},
+        {"index":"6","title":"Generate Bill","url":"/generatebill","icons":"assessment"},
+    
     ]
 }
 

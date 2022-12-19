@@ -11,6 +11,8 @@ import Config from './utils/Config';
 import MainComponentProduct from './components/MainComponentProduct';
 import MainComponentAddProduct from './components/MainComponentAddProduct';
 import MainComponentManageCompanyAccount from './components/MainComponentManageCompanyAccount'
+import MainComponentManageEmployee from './components/MainComponentManageEmployee';
+import MainComponentGenerateBill from './components/MainComponentGenerateBill';
 
 
 
@@ -33,7 +35,13 @@ ReactDOM.render(
                <Route exact path= '/productdetails' activepage="3" element ={<MainComponentAddProduct/>}/>
             </Route>
             <Route element= {<ProtectedRoutes/>}>
-               <Route exact path= '/managecompanyaccount' activepage="3" element ={<MainComponentManageCompanyAccount/>}/>
+               <Route exact path= '/managecompanyaccount' activepage="4" element ={<MainComponentManageCompanyAccount/>}/>
+            </Route>
+            <Route element= {<ProtectedRoutes/>}>
+               <Route exact path= '/manageemploee' activepage="5" element ={<MainComponentManageEmployee/>}/>
+            </Route>
+            <Route element= {<ProtectedRoutes/>}>
+               <Route exact path= '/manageemploee' activepage="6" element ={<MainComponentGenerateBill/>}/>
             </Route>
             
            
