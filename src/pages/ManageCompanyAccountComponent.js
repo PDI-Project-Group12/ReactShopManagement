@@ -17,71 +17,64 @@ class ManageCompanyAccountComponent extends React.Component{
             <section className="content">
                 <div className="container-fluid">
                     <div className="block-header">
-                        <h2>MANAGE PRODUCT DATA</h2>
+                        <h2>MANAGE COMPANY ACCOUNT</h2>
                     </div>
                     <div className="row clearfix">
                 <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div className="card">
                         <div className="header">
                             <h2>
-                                Add Product
+                                Add Company Account
                             </h2>
                             
                         </div>
                         <div className="body">
                             <form onSubmit={this.formSubmit}>
-                                <label htmlFor="email_address">Name</label>
+                                <label htmlFor="email_address">Company Id</label>
                                 <div className="form-group">
                                     <div className="form-line">
-                                        <input type="text" id="name" 
-                                        name="name"
-                                        className="form-control" placeholder="Enter Company Name"/>
+                                        <input type="text" id="company_id" 
+                                        name="company_id"
+                                        className="form-control" placeholder="Enter Company Id"/>
                                     </div>
                                 </div>
-                                <label htmlFor="email_address">License No.</label>
+                                <label htmlFor="email_address">Transaction Type</label>
                                 <div className="form-group">
                                     <div className="form-line">
-                                        <input type="text" id="license_no" 
-                                        name="license_no"
-                                        className="form-control" placeholder="Enter License No."/>
+                                        <input type="text" id="transaction_type" 
+                                        name="transaction_type"
+                                        className="form-control" placeholder="Enter Transaction Type "/>
                                     </div>
                                 </div>
-                                <label htmlFor="email_address">Address</label>
+                                <label htmlFor="email_address">Transaction Amount</label>
                                 <div className="form-group">
                                     <div className="form-line">
-                                        <input type="text" id="address" 
-                                        name="address"
-                                        className="form-control" placeholder="Enter Company Address"/>
+                                        <input type="text" id="transaction_amt" 
+                                        name="transaction_amt"
+                                        className="form-control" placeholder="Enter Transaction Amount"/>
                                     </div>
                                 </div>
-                                <label htmlFor="email_address">Contact No.</label>
+                                <label htmlFor="email_address">Transaction Date</label>
                                 <div className="form-group">
                                     <div className="form-line">
-                                        <input type="text" id="contact_no" 
-                                        name="contact_no"
-                                        className="form-control" placeholder="Enter Contact No."/>
+                                        <input type="text" id="transaction_date" 
+                                        name="transaction_date"
+                                        className="form-control" placeholder="Enter Transaction Date "/>
                                     </div>
                                 </div>
-                                <label htmlFor="email_address">Email</label>
+                                <label htmlFor="email_address">Payment Mode</label>
                                 <div className="form-group">
                                     <div className="form-line">
-                                        <input type="text" id="email" 
-                                        name="email"
-                                        className="form-control" placeholder="Enter Company Email"/>
-                                    </div>
-                                </div>
-                                <label htmlFor="email_address">Description</label>
-                                <div className="form-group">
-                                    <div className="form-line">
-                                        <input type="text" id="description" 
-                                        name="description"
-                                        className="form-control" placeholder="Enter Company Description"/>
+                                        <input type="text" id="payment_mode" 
+                                        name="payment_mode"
+                                        className="form-control" placeholder="Enter Payment Mode Email"/>
                                     </div>
                                 </div>
                                 
+                                
                         
                                 <br/>
-                                <button type="submit" className="btn btn-primary m-t-15 waves-effect-btn-block">Add Product</button>
+                                <button type="submit" className="btn btn-primary m-t-15 waves-effect-btn-block">Add Company Account</button>
                             </form>
                         </div>
                     </div>
