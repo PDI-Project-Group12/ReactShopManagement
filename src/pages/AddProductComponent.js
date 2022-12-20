@@ -24,50 +24,18 @@ class AddProductComponent extends React.Component{
                     <div className="card">
                         <div className="header">
                             <h2>
-                                Add Product
+                                Add Product Details
                             </h2>
                             
                         </div>
                         <div className="body">
                             <form onSubmit={this.formSubmit}>
-                                <label htmlFor="email_address">Name</label>
+                                <label htmlFor="email_address">Product Id</label>
                                 <div className="form-group">
                                     <div className="form-line">
-                                        <input type="text" id="name" 
-                                        name="name"
-                                        className="form-control" placeholder="Enter Company Name"/>
-                                    </div>
-                                </div>
-                                <label htmlFor="email_address">License No.</label>
-                                <div className="form-group">
-                                    <div className="form-line">
-                                        <input type="text" id="license_no" 
-                                        name="license_no"
-                                        className="form-control" placeholder="Enter License No."/>
-                                    </div>
-                                </div>
-                                <label htmlFor="email_address">Address</label>
-                                <div className="form-group">
-                                    <div className="form-line">
-                                        <input type="text" id="address" 
-                                        name="address"
-                                        className="form-control" placeholder="Enter Company Address"/>
-                                    </div>
-                                </div>
-                                <label htmlFor="email_address">Contact No.</label>
-                                <div className="form-group">
-                                    <div className="form-line">
-                                        <input type="text" id="contact_no" 
-                                        name="contact_no"
-                                        className="form-control" placeholder="Enter Contact No."/>
-                                    </div>
-                                </div>
-                                <label htmlFor="email_address">Email</label>
-                                <div className="form-group">
-                                    <div className="form-line">
-                                        <input type="text" id="email" 
-                                        name="email"
-                                        className="form-control" placeholder="Enter Company Email"/>
+                                        <input type="text" id="product_id" 
+                                        name="product_id"
+                                        className="form-control" placeholder="Enter Product Id"/>
                                     </div>
                                 </div>
                                 <label htmlFor="email_address">Description</label>
@@ -75,13 +43,14 @@ class AddProductComponent extends React.Component{
                                     <div className="form-line">
                                         <input type="text" id="description" 
                                         name="description"
-                                        className="form-control" placeholder="Enter Company Description"/>
+                                        className="form-control" placeholder="Enter Description "/>
                                     </div>
                                 </div>
+                               
                                 
                         
                                 <br/>
-                                <button type="submit" className="btn btn-primary m-t-15 waves-effect-btn-block">Add Product</button>
+                                <button type="submit" className="btn btn-primary m-t-15 waves-effect-btn-block">Add Product Details</button>
                             </form>
                         </div>
                     </div>
